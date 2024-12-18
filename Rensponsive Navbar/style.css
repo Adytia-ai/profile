@@ -1,0 +1,250 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(22, 7, 36);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left h1 {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.checkBtn {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: mediumpurple;
+}
+
+#check {
+    display: none;
+}
+
+.right ul {
+    display: flex;
+    list-style: none;
+}
+
+.right ul li a {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.right ul li a:hover {
+    background-color: #fff;
+    border-radius: 7px;
+    color: rgb(22, 7, 36);
+}
+
+/* Hamburger Menu for Mobile */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkBtn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .right ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgb(22, 7, 36);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    #check:checked + .checkBtn + ul {
+        display: flex;
+    }
+
+    .right ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Header */
+header {
+    background: rgb(22, 7, 25);
+    text-align: center;
+    padding: 100px 0;
+}
+
+header.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 40%;
+    height: auto;
+    transition: box-shadow 0.5s, transform 0.3s;
+}
+
+.profile-img:hover {
+    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.intro-text {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+}
+
+.intro-text p {
+    font-size: 1.1em;
+}
+
+/* About Section */
+.about-me {
+    background: rgb(22, 7, 25);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-img {
+    border-radius: 50%;
+    width: 20%;
+    margin-bottom: 30px;
+    transition: box-shadow 0.5s;
+}
+
+.about-img:hover {
+    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.8);
+}
+
+.text-information {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.text-information h2 {
+    margin-bottom: 10px;
+}
+
+/* Skill Section */
+.container {
+    display: block;
+    background-color: rgb(22, 7, 25);
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.text-skill {
+    margin-bottom: 40px;
+}
+
+.skill-jpg img {
+    border-radius: 20%;
+    margin: 15px;
+    width: 10%;
+    height: auto;
+    transition: box-shadow 0.3s;
+}
+
+.skill-jpg img:hover {
+    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.8);
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background-color: rgb(22, 7, 25);
+    text-align: center;
+}
+
+.contact-me {
+    margin-bottom: 30px;
+}
+
+.contact img {
+    width: 7%;
+    height: auto;
+    border-radius: 20%;
+    margin: 10px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.contact img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.8);
+}
+
+/* Footer */
+.footer-end {
+    background: rgb(22, 7, 36);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    .intro-text p {
+        font-size: 1rem;
+    }
+
+    .about-img {
+        width: 30%;
+    }
+
+    .text-information {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .right ul li a {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 60%;
+    }
+
+    .about-img {
+        width: 40%;
+    }
+}
